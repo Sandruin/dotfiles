@@ -104,8 +104,6 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
-#alias j='autojump'
-
 # cd aliases
 alias cd..='cd ..'
 alias ..='cd ../'
