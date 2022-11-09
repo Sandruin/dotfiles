@@ -116,8 +116,6 @@ alias .....='cd ../../../../'
 #alias cd ....='cd ../../../'
 
 # clear
-alias c='clear'
-alias cl='clear'
 alias claer='clear'
 alias clera='clear'
 
