@@ -116,12 +116,16 @@ alias .....='cd ../../../../'
 #alias cd ....='cd ../../../'
 
 # clear
+alias c='clear'
+alias cl='clear'
 alias claer='clear'
 alias clera='clear'
 
 # python
 alias pycrvenv='python3 -m venv venv'
 alias pyacvenv='source venv/bin/activate'
+
+# git
 
 # make mv move hidden files as well
 shopt -s dotglob
