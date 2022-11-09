@@ -15,5 +15,5 @@ git commit -m "auto-commit"
 git push
 
 # cp new stuff to home dir
-cp -f ./bash_aliases ~/
-cp -f ./vimrc ~/
+cp -f ./.bash_aliases ~/
+cp -f ./.vimrc ~/
