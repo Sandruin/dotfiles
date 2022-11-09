@@ -20,7 +20,7 @@ set ttyfast                        " of course we're in a fast tty
 set ruler                          " enable the bottom line
 set textwidth=0                    " no auto wrapping
 set wrapmargin=0                   " really no auto wrapping
-set scrolloff=4                    " lines to keep visible when scrolling
+set scrolloff=7                    " lines to keep visible when scrolling
 set title                          " set x11 window title
 set confirm                        " ask for saving confirmation if forgotten
 

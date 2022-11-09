@@ -1,14 +1,27 @@
 # mkdir and cd to it
 mcd() { mkdir -pv "$1" && cd "$1"; }
+mvdir()
+{
+    dir="$2" # include a / at the end to indicate directory (not filename)
+    tmp="$2"; tmp="${tmp: -1}"
+    [ "$tmp" != "/" ] && dir="$(dirname "$2")"
+    [ -a "$dir" ] ||
+    mkdir -p "$dir" &&
+    mv "$@"
+}
 
 # allow sudo commands to use .basrhc aliases
 alias sudo='sudo '
 
 if [ $UID -ne 0 ]; then
   alias reboot='sudo reboot'
+  alias shutdown='sudo shutdown'
   alias dmesg='sudo dmesg -H -L'
+  alias snap='sudo snap'
+  alias dpkg='sudo dpkg'
   alias apt='sudo apt'
   alias apt-get='sudo apt-get'
+  alias fdisk='sudo fdisk'
 fi
 
 # docker
@@ -19,9 +32,11 @@ alias dcp='docker-compose -f ~/docker-compose.yml '
 alias dtail='docker logs -tf --tail=50 '
 # remove unused images (useful after an upgrade)
 alias dprune='docker image prune'
+alias dc='docker-compose'
 
 alias untar='tar -xzvf'
 alias wget='wget -c'
+alias lsblk='lsblk -e7' # exclude loop (snap) device
 alias ls='ls -h'
 alias getpass='openssl rand -base64 20'
 alias count='ls | wc -l'
@@ -31,16 +46,18 @@ alias ports='netstat -tulanp'
 alias www='python -m SimpleHTTPServer 8000'
 alias ipe='curl ipinfo.io/ip'
 alias ipi='ip -4 addr show eno1 | grep -oP "(?<=inet\s)\d+(\.\d+){3}"'
+alias woman='man'
 
 alias df='df -H'
 alias du='du -ch'
-alias grep='grep --color=auto'
+alias grep='grep -i --color=auto'
 alias mkdir='mkdir -pv'
 alias diff='colordiff'
 alias update='sudo apt-get update && sudo apt-get upgrade'
 
 alias h='history'
 alias hgrep='history | grep'
+alias lgrep='ls | grep'
 
 alias path='echo -e ${PATH//:/\\n}'
 alias now='date +"%T"'
@@ -74,6 +91,7 @@ alias va='source ./venv/bin/activate'
 alias top='atop'
 
 alias cpp='rsync -ah --info=progress2'
+alias mvp='rsync -ah --info=progress2 --remove-source-files'
 
 # do not delete / or prompt if deleting more than 3 files at a time
 alias rm='rm -I --preserve-root'
@@ -85,6 +103,8 @@ alias ln='ln -i'
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
+
+#alias j='autojump'
 
 # cd aliases
 alias cd..='cd ..'
@@ -100,6 +120,10 @@ alias c='clear'
 alias cl='clear'
 alias claer='clear'
 alias clera='clear'
+
+# python
+alias pycrvenv='python3 -m venv venv'
+alias pyacvenv='source venv/bin/activate'
 
 # make mv move hidden files as well
 shopt -s dotglob
