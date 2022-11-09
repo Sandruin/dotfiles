@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # this script assumes files in ~/ and in git repo aren't too different
+cd "$(dirname "$0")"
 
 # pull changes
 git pull
