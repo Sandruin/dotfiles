@@ -17,3 +17,6 @@ git push
 # cp new stuff to home dir
 cp -f ./.bash_aliases ~/
 cp -f ./.vimrc ~/
+
+# source .bash_aliases
+source ~/.bash_aliases
