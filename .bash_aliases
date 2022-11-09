@@ -120,6 +120,8 @@ alias claer='clear'
 alias clera='clear'
 
 # python
+alias py='python3'
+alias python='python3'
 alias pycrvenv='python3 -m venv venv'
 alias pyacvenv='source venv/bin/activate'
 
