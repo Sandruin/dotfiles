@@ -3,12 +3,12 @@
 # this script assumes files in ~/ and in git repo aren't too different
 cd "$(dirname "$0")"
 
-# pull changes
-git pull
-
 # copy files from home dir to this dir
 cp -f ~/.bash_aliases ./
 cp -f ~/.vimrc ./
+
+# pull changes
+git pull
 
 # push new changes and merge
 git add -A
