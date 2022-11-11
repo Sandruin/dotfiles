@@ -132,5 +132,3 @@ alias pyacvenv='source venv/bin/activate'
 
 # make mv move hidden files as well
 shopt -s dotglob
-
-# pop
