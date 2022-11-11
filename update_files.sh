@@ -12,7 +12,7 @@ git add .
 git commit -m "auto-commit"
 
 # pull changes
-git pull
+git pull --no-edit
 git push
 
 # cp new stuff to home dir
