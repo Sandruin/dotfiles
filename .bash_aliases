@@ -104,6 +104,9 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
+# equality under unix
+alias woman='man'
+
 # cd aliases
 alias cd..='cd ..'
 alias ..='cd ../'

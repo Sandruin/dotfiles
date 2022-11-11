@@ -7,12 +7,12 @@ cd "$(dirname "$0")"
 cp -f ~/.bash_aliases ./
 cp -f ~/.vimrc ./
 
+# push new changes and merge
+git add .
+git commit -m "auto-commit"
+
 # pull changes
 git pull
-
-# push new changes and merge
-git add -A
-git commit -m "auto-commit"
 git push
 
 # cp new stuff to home dir
