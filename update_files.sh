@@ -9,6 +9,7 @@ cp -f ~/.vimrc ./
 
 # push new changes and merge
 git add -A
+git add .
 git commit -m "auto-commit"
 
 # pull changes

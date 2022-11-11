@@ -104,6 +104,9 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
+# equality under unix
+alias woman='man'
+
 # cd aliases
 alias cd..='cd ..'
 alias ..='cd ../'
@@ -120,6 +123,8 @@ alias claer='clear'
 alias clera='clear'
 
 # python
+alias py='python3'
+alias python='python3'
 alias pycrvenv='python3 -m venv venv'
 alias pyacvenv='source venv/bin/activate'
 
