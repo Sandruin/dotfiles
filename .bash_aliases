@@ -116,8 +116,6 @@ alias .....='cd ../../../../'
 #alias cd ...='cd ../../'
 #alias cd ....='cd ../../../'
 
-# server
-
 # clear
 alias c='clear'
 alias cl='clear'
