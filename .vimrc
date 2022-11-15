@@ -32,24 +32,14 @@ set wildignore+=*.swp
 
 let mapleader = ","
 
-" get escape
-inoremap jk <ESC>
-inoremap jj <Esc>
-
-" allow line movement with Alt
-" fix Alt key
-"execute "set <A-j>=\ej"
-"execute "set <A-k>=\ek"
+" move a line of text using ALT+[jk]
+" fix for vim (works for gvim)
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
-
-" allow navigation during insert
-"inoremap <A-l> <Esc>ji
-"inoremap <A-j> <Esc>hi
-"inoremap <A-k> <Esc>ki
-"inoremap <A-;> <Esc>li
 
 " visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
