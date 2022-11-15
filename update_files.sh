@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# this script assumes files in ~/ and in git repo aren't too different
+# this script assumes files in $HOME/ and in git repo aren't too different
 cd "$(dirname "$0")"
 
 # copy files from home dir to this dir
-cp -f ~/.bash_aliases ./
-cp -f ~/.vimrc ./
+cp -f $HOME/.bash_aliases ./
+cp -f $HOME/.vimrc ./
 
 # push new changes and merge
 git add .
@@ -16,8 +16,8 @@ git pull --no-edit
 git push
 
 # cp new stuff to home dir
-cp -f ./.bash_aliases ~/
-cp -f ./.vimrc ~/
+cp -f ./.bash_aliases $HOME/
+cp -f ./.vimrc $HOME/
 
 # source .bash_aliases
-source ~/.bash_aliases
+source $HOME/.bash_aliases
