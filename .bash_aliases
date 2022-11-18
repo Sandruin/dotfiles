@@ -130,5 +130,7 @@ alias pyacvenv='source venv/bin/activate'
 
 # git
 
+alias bat='batcat'
+
 # make mv move hidden files as well
 shopt -s dotglob
