@@ -23,6 +23,7 @@ set wrapmargin=0                   " really no auto wrapping
 set scrolloff=7                    " lines to keep visible when scrolling
 set title                          " set x11 window title
 set confirm                        " ask for saving confirmation if forgotten
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " autocomplete
 set wildignorecase
